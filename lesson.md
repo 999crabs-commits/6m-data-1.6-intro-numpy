@@ -1,65 +1,39 @@
-# Lesson
+# **Detailed Lesson Plan: 1.6 Introduction to NumPy**
 
-## Brief
+**Total Duration:** 180 Minutes (3 Hours)
 
-### Preparation
+## **Section 1: The Environment & The Engine (60 min)**
 
-Create the conda environment by using the `environment.yml` file.
+*Goal: Master Jupyter in VSCode and understand the "Why" of NumPy.*
 
-### Lesson Overview
+| Time | Activity | Instructor Notes |
+| ----- | ----- | ----- |
+| 05m | **Objectives & Intro** | Highlight: NumPy is the foundation for Pandas and Scikit-Learn. |
+| 15m | **Workshop 1: Jupyter/VSCode** | Demo: Creating cells, Markdown vs Code, Keyboard shortcuts (`Shift+Enter`). |
+| 15m | **Workshop 2: Speed Test** | Demo: Compare Python List vs NumPy Array (1M elements). Use `%timeit`. |
+| 20m | **Theory: Memory & Types** | Explain **Contiguous Memory** vs Python lists. Discuss homogeneous types. |
+| 05m | **Q\&A** | Address "Why not just use Excel?" (Scale, Memory efficiency, Automation). |
 
-This lesson introduces `Jupyter Notebook` and `Numpy` library. Jupyter Notebook is a web-based interactive development environment for creating and sharing documents that contain live code, equations, visualizations and narrative text. Numpy is a library for the Python programming language, adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
+## **Section 2: Array Anatomy & Arithmetic (60 min)**
 
----
+*Goal: Create arrays, manage data types, and perform vectorized math.*
 
-## Part 1 - Introduction to Jupyter Notebook
+| Time | Activity | Instructor Notes |
+| ----- | ----- | ----- |
+| 10m | **Theory: The ndarray** | Explain dimensions (1D, 2D, 3D), `.shape`, `.dtype`, and `.ndim`. |
+| 20m | **Workshop 3: Creation & Casting** | **Demo:** `np.array()`, `np.zeros()`, `np.ones()`. **Exercise:** Using `.astype()` to cast floats to ints. |
+| 20m | **Workshop 4: Math & Broadcasting** | **Demo:** Element-wise math and Broadcasting scalars/arrays. **Exercise:** Vectorized arithmetic. |
+| 05m | **Socratic Review** | "What happens to the decimal when casting `float` to `int32`?" (Truncation). |
+| 05m | **Break** | Stretch and reset. |
 
-Install the prescribed conda environment before you begin.
+## **Section 3: Data Selection, Logic & Algebra (60 min)**
 
-```bash
-conda env create -f environment.yml
-```
+*Goal: Advanced manipulation, filtering, and introduction to matrix math.*
 
-### Jupyter Notebook Demo
+| Time | Activity | Instructor Notes |
+| ----- | ----- | ----- |
+| 15m | **Workshop 5: Slicing Views** | **Demo:** `[row, col]` syntax. Explain that slices are **views** (modifying a slice changes the original). |
+| 15m | **Workshop 6: Boolean & Set Logic** | **Demo:** Filtering by mask (e.g., `data[names == 'Bob']`). **Exercise:** `np.unique()` and `np.where()`. |
+| 15m | **Workshop 7: Stats & Algebra** | **Demo:** `.mean(axis=0)` vs `axis=1`. Introduction to Matrix Multiplication with `@` and `.dot()`. |
+| 15m | **Assessment & Wrap-up** | Run the 5-question quiz. Connect NumPy arrays to future Pandas DataFrames. |
 
-To start Jupyter Notebook, open your terminal (or anaconda prompt), then activate the conda environment:
-
-```bash
-conda activate pds
-```
-
-followed by:
-
-```bash
-jupyter notebook
-```
-
-This will start the Jupyter Notebook server and open a browser window. You can then navigate to the folder where you want to create a new notebook and click on the `New` button on the top right corner of the page. You can then select `Python 3` to create a new notebook.
-
-> Navigate to the `notebooks` folder in this directory and create a new notebook, name it `jupyter_notebook_demo`.
->
-> Then, explore the different features of Jupyter Notebook. Try different command mode actions. Write and execute python code. Write and render markdown. Familiarize with the different keyboard shortcuts.
->
-> Save your notebook.
-
-To end the Jupyter Notebook server, go back to the terminal (or anaconda prompt) and press `Ctrl + C` twice.
-
-### Jupyter Notebook extension in VSCode
-
-We installed the Jupyter extension in VSCode in Unit 1. This extension allows us to use Jupyter Notebook in VSCode. To start a Jupyter Notebook server in VSCode, open the command palette (`Ctrl + Shift + P` or `Cmd + Shift + P` on mac), then search for `Jupyter: Create New Blank Notebook`. This will start the Jupyter Notebook server and open a new notebook in VSCode.
-
-> Create a new notebook in VSCode.
->
-> In the `Select Kernel`, choose `Python Environments`, then search for `pds` and select it.
->
-> Write and execute python code. Write and render markdown. Explore the different features and keyboard shortcuts.
->
-> Then save the file in the `notebooks` folder and name it `jupyter_notebook_vscode_demo.ipynb`.
-
-## Part 2 - Introduction to Numpy
-
-We will be using the `notebooks/numpy_lesson.ipynb` notebook for this section. We will be mainly using the Jupyter Notebook extension in VSCode throughout this course as it is more convenient and coherent.
-
-> Open the notebook in VSCode by double clicking on the file. Then select `pds` conda environment for the kernel.
->
-> Follow on with the lesson in the notebook.
